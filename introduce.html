@@ -3,58 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kopi Cubluk</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f4f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: #4e342e;
-      margin-bottom: 20px;
-    }
-
-    .hero-image {
-      width: 250px; /* Ukuran logo diperkecil */
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-
-    .menu-button {
-      padding: 12px 24px;
-      font-size: 1.1em;
-      background-color: #4e342e;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-decoration: none;
-    }
-
-    .menu-button:hover {
-      background-color: #3e2723;
-    }
-  </style>
+  <title>Selamat Datang - Kopi Mu Clubuk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-yellow-50 text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-amber-900 text-white text-center py-8 shadow-lg">
+    <h1 class="text-5xl font-extrabold tracking-wide mb-2">Kopi Mu Clubuk</h1>
+    <p class="text-xl italic">Ngopi Santai, Nikmati Hari</p>
+    <p class="text-sm mt-2 opacity-90">Tempat ngopi favorit di Baturaden</p>
+  </header>
 
-  <h1>Kopimu Clubuk</h1>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-amber-100 to-yellow-200 py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="mb-8">
+        <h2 class="text-4xl font-bold text-amber-900 mb-4">Selamat Datang di Kopi Mu Clubuk</h2>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Temukan pengalaman ngopi yang berbeda dengan berbagai pilihan kopi premium dan makanan lezat. 
+          Nikmati suasana santai sambil menikmati secangkir kopi berkualitas tinggi.
+        </p>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <button onclick="window.location.href='index.html'" class="bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 rounded-full shadow-lg transition duration-200 text-lg font-semibold">
+          ☕ Lihat Menu
+        </button>
+        <button onclick="scrollToAbout()" class="bg-white hover:bg-gray-100 text-amber-800 px-8 py-3 rounded-full shadow-lg transition duration-200 text-lg font-semibold border-2 border-amber-800">
+          📖 Tentang Kami
+        </button>
+      </div>
+    </div>
+  </section>
 
-  <img src="logo.jpg" alt="Kopi Cubluk" class="hero-image">
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-amber-900 mb-12">Mengapa Memilih Kopi Mu Clubuk?</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6 rounded-lg bg-amber-50">
+          <div class="text-4xl mb-4">☕</div>
+          <h4 class="text-xl font-semibold text-amber-900 mb-2">Kopi Premium</h4>
+          <p class="text-gray-600">Kopi pilihan berkualitas tinggi dengan racikan yang sempurna untuk pengalaman ngopi terbaik.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-amber-50">
+          <div class="text-4xl mb-4">🍽️</div>
+          <h4 class="text-xl font-semibold text-amber-900 mb-2">Makanan Lezat</h4>
+          <p class="text-gray-600">Berbagai pilihan makanan ringan dan berat yang cocok menemani secangkir kopi Anda.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-amber-50">
+          <div class="text-4xl mb-4">🌿</div>
+          <h4 class="text-xl font-semibold text-amber-900 mb-2">Suasana Nyaman</h4>
+          <p class="text-gray-600">Tempat yang nyaman dan santai untuk bersantai sambil menikmati kopi favorit Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <a href="cobafinal.html" class="menu-button">Lihat Menu</a>
+  <!-- Menu Preview -->
+  <section class="py-16 bg-yellow-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-amber-900 mb-12">Menu Favorit Kami</h3>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="butterscotch.jpeg" alt="Butterscotch Coffee" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Butterscotch Coffee</h4>
+            <p class="text-sm text-gray-600">Rp 18.000</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="lattecoffee.jpg" alt="Latte Coffee" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Latte Coffee</h4>
+            <p class="text-sm text-gray-600">Rp 15.000</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="ayamgorengkampungnasi.jpg" alt="Ayam Goreng Kampung" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Ayam Goreng Kampung</h4>
+            <p class="text-sm text-gray-600">Rp 25.000</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="churros.jpg" alt="Churros" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Churros</h4>
+            <p class="text-sm text-gray-600">Rp 15.000</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="mixplatter2.jpg" alt="Mix Platter" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Mix Platter</h4>
+            <p class="text-sm text-gray-600">Rp 21.000</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <button onclick="window.location.href='index.html'" class="bg-amber-800 hover:bg-amber-900 text-white px-6 py-3 rounded-full shadow-lg transition duration-200">
+          Lihat Semua Menu →
+        </button>
+      </div>
+    </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-amber-900 mb-12">Tentang Kopi Mu Clubuk</h3>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h4 class="text-2xl font-semibold text-amber-900 mb-4">Cerita Kami</h4>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Kopi Mu Clubuk didirikan dengan passion untuk memberikan pengalaman ngopi terbaik kepada pelanggan. 
+            Kami memilih biji kopi berkualitas tinggi dan mengolahnya dengan teknik yang tepat untuk menghasilkan 
+            cita rasa yang sempurna.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Selain kopi, kami juga menyajikan berbagai makanan lezat yang cocok menemani secangkir kopi Anda. 
+            Dari makanan ringan hingga makanan berat, semua dibuat dengan bahan berkualitas dan rasa yang nikmat.
+          </p>
+        </div>
+        
+        <div class="bg-amber-100 p-8 rounded-lg">
+          <h4 class="text-xl font-semibold text-amber-900 mb-4">Informasi Kontak</h4>
+          <div class="space-y-3">
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">📍</span>
+              <span>Jl. Raya Baturaden Bar.karangtengah, Dusun 3</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">📱</span>
+              <span>087760722634</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">📸</span>
+              <a href="https://instagram.com/kopimuclubuk" class="text-blue-600 hover:underline">@kopimuclubuk</a>
+            </div>
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">🕒</span>
+              <span>Buka setiap hari</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-amber-900 text-white text-center p-6">
+    <p class="mb-2">&copy; 2025 Kopi Mu Clubuk | #ngopisampemati</p>
+    <p class="text-sm opacity-90">Terima kasih telah memilih Kopi Mu Clubuk sebagai tempat ngopi favorit Anda!</p>
+  </footer>
+
+  <script>
+    function scrollToAbout() {
+      document.getElementById('about').scrollIntoView({ 
+        behavior: 'smooth' 
+      });
+    }
+  </script>
 </body>
 </html>
