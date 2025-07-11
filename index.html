@@ -3,216 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kopi Mu Clubuk</title>
+  <title>Selamat Datang - Kopi Mu Clubuk</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-yellow-50 text-gray-800 font-sans">
   <!-- Header -->
-  <header class="bg-amber-900 text-white text-center py-6 shadow-md">
-    <h1 class="text-4xl font-extrabold tracking-wide">Kopi Mu Clubuk</h1>
-    <p class="text-lg mt-2 italic">Ngopi Santai, Nikmati Hari</p>
+  <header class="bg-amber-900 text-white text-center py-8 shadow-lg">
+    <h1 class="text-5xl font-extrabold tracking-wide mb-2">Kopi Mu Clubuk</h1>
+    <p class="text-xl italic">Ngopi Santai, Nikmati Hari</p>
+    <p class="text-sm mt-2 opacity-90">Tempat ngopi favorit di Baturaden</p>
   </header>
 
-</div>
-</section>
-  
-  <main class="max-w-6xl mx-auto p-6">
-    <!-- Menu Coffee -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4 text-amber-900">☕ Daftar Menu</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="menu-list">
-        <!-- Menu akan dirender dengan JavaScript -->
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-amber-100 to-yellow-200 py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="mb-8">
+        <h2 class="text-4xl font-bold text-amber-900 mb-4">Selamat Datang di Kopi Mu Clubuk</h2>
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Temukan pengalaman ngopi yang berbeda dengan berbagai pilihan kopi premium dan makanan lezat. 
+          Nikmati suasana santai sambil menikmati secangkir kopi berkualitas tinggi.
+        </p>
       </div>
-    </section>
-
-    <!-- Daftar Pesanan Terbaru -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold mb-4 text-amber-900">📋 Daftar Pesanan Terbaru</h2>
-      <div id="order-list" class="space-y-4"></div>
-    </section>
-
-    <!-- Form Pemesanan Pop-up -->
-    <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-      <div class="bg-white p-6 rounded shadow-md w-80 relative">
-        <button onclick="closeModal()" class="absolute top-2 right-3 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
-        <h3 class="text-lg font-bold mb-2" id="modal-menu-title"></h3>
-
-        <label class="block mb-2">
-          Nama:
-          <input type="text" id="customer-name" class="w-full border rounded px-2 py-1 mt-1" required>
-        </label>
-        <label class="block mb-2">
-          Jumlah:
-          <input type="number" id="order-quantity" class="w-full border rounded px-2 py-1 mt-1" min="1" value="1" required>
-        </label>
-        <label class="block mb-2">
-          Metode Pembayaran:
-          <select id="payment-method" class="w-full border rounded px-2 py-1">
-            <option>QRIS</option>
-            <option>Cash</option>
-            <option>Transfer</option>
-          </select>
-        </label>
-        <label class="block mb-2">
-          Rating:
-          <select id="rating" class="w-full border rounded px-2 py-1">
-            <option>⭐</option>
-            <option>⭐⭐</option>
-            <option>⭐⭐⭐</option>
-            <option>⭐⭐⭐⭐</option>
-            <option>⭐⭐⭐⭐⭐</option>
-          </select>
-        </label>
-
-        <!-- Tombol Kirim -->
-        <button onclick="submitOrder()" class="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700 w-full">Kirim</button>
-
-        <!-- Tombol batal pesan menu -->
-        <button onclick="closeModal()" class="mt-3 text-sm text-gray-600 hover:underline w-full">Ga jadi pilih menu ini</button>
-
-        <!-- Tombol keluar dari web -->
-        <button onclick="exitWebsite()" class="mt-2 text-sm text-red-700 hover:underline w-full font-semibold">Keluar aja dari web</button>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <button onclick="window.location.href='index.html'" class="bg-amber-800 hover:bg-amber-900 text-white px-8 py-3 rounded-full shadow-lg transition duration-200 text-lg font-semibold">
+          ☕ Lihat Menu
+        </button>
+        <button onclick="scrollToAbout()" class="bg-white hover:bg-gray-100 text-amber-800 px-8 py-3 rounded-full shadow-lg transition duration-200 text-lg font-semibold border-2 border-amber-800">
+          📖 Tentang Kami
+        </button>
       </div>
     </div>
-    <!-- Tombol Kembali ke introduce.html -->
-<div class="fixed bottom-6 right-6 z-50">
-  <button onclick="window.location.href='introduce.html'" class="bg-amber-800 hover:bg-amber-900 text-white px-5 py-2 rounded-full shadow-lg transition duration-200">
-    ⬅️ Kembali
-  </button>
-</div>
+  </section>
 
-  </main>
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-amber-900 mb-12">Mengapa Memilih Kopi Mu Clubuk?</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6 rounded-lg bg-amber-50">
+          <div class="text-4xl mb-4">☕</div>
+          <h4 class="text-xl font-semibold text-amber-900 mb-2">Kopi Premium</h4>
+          <p class="text-gray-600">Kopi pilihan berkualitas tinggi dengan racikan yang sempurna untuk pengalaman ngopi terbaik.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-amber-50">
+          <div class="text-4xl mb-4">🍽️</div>
+          <h4 class="text-xl font-semibold text-amber-900 mb-2">Makanan Lezat</h4>
+          <p class="text-gray-600">Berbagai pilihan makanan ringan dan berat yang cocok menemani secangkir kopi Anda.</p>
+        </div>
+        
+        <div class="text-center p-6 rounded-lg bg-amber-50">
+          <div class="text-4xl mb-4">🌿</div>
+          <h4 class="text-xl font-semibold text-amber-900 mb-2">Suasana Nyaman</h4>
+          <p class="text-gray-600">Tempat yang nyaman dan santai untuk bersantai sambil menikmati kopi favorit Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Preview -->
+  <section class="py-16 bg-yellow-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-amber-900 mb-12">Menu Favorit Kami</h3>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="butterscotch.jpeg" alt="Butterscotch Coffee" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Butterscotch Coffee</h4>
+            <p class="text-sm text-gray-600">Rp 18.000</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="lattecoffee.jpg" alt="Latte Coffee" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Latte Coffee</h4>
+            <p class="text-sm text-gray-600">Rp 15.000</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="ayamgorengkampungnasi.jpg" alt="Ayam Goreng Kampung" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Ayam Goreng Kampung</h4>
+            <p class="text-sm text-gray-600">Rp 25.000</p>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="churros.jpg" alt="Churros" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Churros</h4>
+            <p class="text-sm text-gray-600">Rp 15.000</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="mixplatter2.jpg" alt="Mix Platter" class="w-full h-32 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold text-amber-900">Mix Platter</h4>
+            <p class="text-sm text-gray-600">Rp 21.000</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <button onclick="window.location.href='index.html'" class="bg-amber-800 hover:bg-amber-900 text-white px-6 py-3 rounded-full shadow-lg transition duration-200">
+          Lihat Semua Menu →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center text-amber-900 mb-12">Tentang Kopi Mu Clubuk</h3>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h4 class="text-2xl font-semibold text-amber-900 mb-4">Cerita Kami</h4>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Kopi Mu Clubuk didirikan dengan passion untuk memberikan pengalaman ngopi terbaik kepada pelanggan. 
+            Kami memilih biji kopi berkualitas tinggi dan mengolahnya dengan teknik yang tepat untuk menghasilkan 
+            cita rasa yang sempurna.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Selain kopi, kami juga menyajikan berbagai makanan lezat yang cocok menemani secangkir kopi Anda. 
+            Dari makanan ringan hingga makanan berat, semua dibuat dengan bahan berkualitas dan rasa yang nikmat.
+          </p>
+        </div>
+        
+        <div class="bg-amber-100 p-8 rounded-lg">
+          <h4 class="text-xl font-semibold text-amber-900 mb-4">Informasi Kontak</h4>
+          <div class="space-y-3">
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">📍</span>
+              <span>Jl. Raya Baturaden Bar.karangtengah, Dusun 3</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">📱</span>
+              <span>087760722634</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">📸</span>
+              <a href="https://instagram.com/kopimuclubuk" class="text-blue-600 hover:underline">@kopimuclubuk</a>
+            </div>
+            <div class="flex items-center">
+              <span class="text-amber-800 mr-3">🕒</span>
+              <span>Buka setiap hari</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-amber-900 text-white text-center p-4 mt-10">
-    <p>&copy; 2025 Kopi Mu Clubuk | IG: <a href="https://instagram.com/kopimuclubuk" class="underline">@kopimuclubuk</a> | WA: 087760722634 | #ngopisampemati</p>
-    <p>Alamat: Jl. Raya Baturaden Bar.karangtengah, Dusun 3</p>
+  <footer class="bg-amber-900 text-white text-center p-6">
+    <p class="mb-2">&copy; 2025 Kopi Mu Clubuk | #ngopisampemati</p>
+    <p class="text-sm opacity-90">Terima kasih telah memilih Kopi Mu Clubuk sebagai tempat ngopi favorit Anda!</p>
   </footer>
 
-  <!-- Script JavaScript -->
   <script>
-    const menus = [
-      { title: "Butterscotch Coffee", price: 18000, image: "butterscotch.JPEG" },
-      { title: "Latte Coffee", price: 15000, image: "lattecoffee.jpg" },
-      { title: "Coffee Gula Aren", price: 12000, image: "kopigulaaren.jpg" },
-      { title: "Paket Ayam Goreng Kampung", price: 25000, image: "ayamgorengkampungnasi.jpg" },
-      { title: "Nasi Goreng Spesial", price: 13000, image: "nasigoreng.jpg" },
-      { title: "Mie Goreng Spesial", price: 14000, image: "miegoreng.jpg" },
-      { title: "Roti Canai", price: 14000, image: "roticanai.jpg" },
-      { title: "Mendoan", price: 12000, image: "mendoan.jpg" },
-      { title: "Cireng", price: 12000, image: "cireng.jpg" },
-      { title: "Mix Platter", price: 21000, image: "mixplatter2.jpg" },
-      { title: "Churros", price: 15000, image: "churros.jpg" },
-      { title: "Chocolate Lava Cake", price: 23000, image: "chocolatelava.jpg" },
-    ];
-
-    const menuList = document.getElementById("menu-list");
-    const modal = document.getElementById("order-modal");
-    const modalTitle = document.getElementById("modal-menu-title");
-    let selectedMenu = "";
-
-    menus.forEach(menu => {
-      const div = document.createElement("div");
-      div.className = "bg-white rounded-lg shadow-md text-center p-4";
-      div.innerHTML = `
-        <img src="${menu.image}" alt="${menu.title}" class="w-full h-48 object-cover mb-2 rounded">
-        <p class="font-semibold text-lg">${menu.title}</p>
-        <p class="text-sm text-gray-700">Rp${menu.price.toLocaleString()}</p>
-        <p class="text-sm text-yellow-600 mb-2">Rating: ⭐⭐⭐⭐☆</p>
-        <button onclick="openModal('${menu.title}')" class="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700 transition">Pesan</button>
-      `;
-      menuList.appendChild(div);
-    });
-
-    function openModal(menuTitle) {
-      selectedMenu = menuTitle;
-      modalTitle.textContent = `Pesan: ${menuTitle}`;
-      document.getElementById("customer-name").value = "";
-      document.getElementById("order-quantity").value = 1;
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-    }
-
-    function closeModal() {
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-    }
-
-    function submitOrder() {
-      const name = document.getElementById("customer-name").value;
-      const quantity = document.getElementById("order-quantity").value;
-      const payment = document.getElementById("payment-method").value;
-      const rating = document.getElementById("rating").value;
-      if (!name || quantity < 1) {
-        alert("Mohon isi nama dan jumlah dengan benar.");
-        return;
-      }
-      // Kirim data ke backend
-      fetch('http://localhost:3000/api/order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: name,
-          menu: selectedMenu,
-          quantity: Number(quantity),
-          payment: payment,
-          rating: rating
-        })
-      })
-      .then(response => {
-        if (!response.ok) throw new Error('Gagal menyimpan pesanan');
-        return response.json();
-      })
-      .then(data => {
-        alert(`Terima kasih, ${name}!\nPesanan Anda sudah dicatat.`);
-        closeModal();
-      })
-      .catch(err => {
-        alert('Terjadi kesalahan saat menyimpan pesanan.');
+    function scrollToAbout() {
+      document.getElementById('about').scrollIntoView({ 
+        behavior: 'smooth' 
       });
     }
-
-    function exitWebsite() {
-      alert("Sampai jumpa, semoga lain kali jadi beli! 👋");
-      window.location.href = "about:blank"; // Ganti jika ingin redirect ke halaman lain
-    }
-
-    function fetchOrders() {
-      fetch('http://localhost:3000/api/order')
-        .then(res => res.json())
-        .then(orders => {
-          const orderList = document.getElementById('order-list');
-          orderList.innerHTML = '';
-          if (orders.length === 0) {
-            orderList.innerHTML = '<p class="text-gray-500">Belum ada pesanan.</p>';
-            return;
-          }
-          orders.forEach(order => {
-            const div = document.createElement('div');
-            div.className = "bg-white rounded shadow p-4";
-            div.innerHTML = `
-              <div class="flex justify-between items-center">
-                <div>
-                  <span class="font-semibold">${order.name}</span> pesan <span class="font-semibold">${order.menu}</span> (${order.quantity}x)
-                </div>
-                <div class="text-sm text-gray-500">${new Date(order.createdAt).toLocaleString('id-ID')}</div>
-              </div>
-              <div class="text-sm">Pembayaran: ${order.payment} | Rating: ${order.rating}</div>
-            `;
-            orderList.appendChild(div);
-          });
-        });
-    }
-    // Panggil saat halaman dimuat
-    fetchOrders();
-    // Setelah submitOrder berhasil, panggil fetchOrders agar daftar pesanan terupdate
-    document.querySelector('button[onclick="submitOrder()"]').addEventListener('click', function() {
-      setTimeout(fetchOrders, 1000);
-    });
-
   </script>
 </body>
 </html>
-
